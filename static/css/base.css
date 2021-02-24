@@ -10,6 +10,130 @@ body {
     font-family: 'Lato';
 }
 
-.logo-font {
-    text-transform: uppercase;
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #333;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.border-white {
+    border: 1px solid white !important;
+}
+
+.bg-black {
+    background: #000 !important;
+}
+
+.bg-white {
+    background: #fff !important;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
+
+/* ==== Weights, styles, letterspacing, etc. ==== */
+
+.thin{font-weight: 100;}
+.light{font-weight: 300;}
+.regular{font-weight: 400;}
+.bold{font-weight: 700;}
+.italic{font-style: italic;}
+.normal{font-style: normal;}
+.ls-small{letter-spacing: 2px;}
+.ls-medium{letter-spacing: 4px;}
+.ls-large{letter-spacing: 8px;}
+.ls-xlarge{letter-spacing: 12px;}
+.uppercase{text-transform: uppercase;}
+.color-emphasis-1{color: #FF4056}
+.color-emphasis-2{color: #000;}
+.color-emphasis-3{color: #60547c}
+.text-left{text-align: left;}
+.line-height-small{line-height: 1.2}
+.line-height-medium{line-height: 1.45}
+.line-height-large{line-height: 1.65}
+
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* Pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px){
+    .header-container{
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
 }
