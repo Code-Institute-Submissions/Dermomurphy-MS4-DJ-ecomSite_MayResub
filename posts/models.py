@@ -11,3 +11,6 @@ class Posts(models.Model):
     body = models.TextField()
     image = models.ImageField(default='noimage.png')
     created_on = models.DateTimeField(default=datetime.now, blank=True)
+
+    def __str__(self):
+        return self.title
