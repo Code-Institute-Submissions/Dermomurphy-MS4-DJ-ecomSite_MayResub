@@ -12,20 +12,20 @@
 {% block content %}
 <div class="overlay"></div>
     <div class ="container text-white">
-         <h1 class="text-center uppercase my-3">Post Detail</h1>
-         <hr class="my-5">
+         <h1 class="text-center uppercase my-3">{{post.title }}</h1>
+         <hr class="my-3 bg-white">
 
-         <div class="card mb-3" style="max-width: 540px;">
+         <div class="card mb-3" style="max-width: 100%;">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="/media/{{ post.image }}" alt="{{ post.title }}">
+                <img src="/media/{{ post.image }}" alt="{{ post.title }}" width="100%" height=auto>
               </div>
               <div class="col-md-8">
-                <div class="card-body">
+                <div class="card-body w-100">
                   <h5 class="card-title">{{post.title}}</h5>
                   <p class="card-text">{{ post.body }}</p>
                   <p class="card-text"><small class="text-muted">Last Updated: {{ post.created_on }}</small></p>
-                  <a href="" class="btn btn-lg ">Go Back</a>
+                  <a href="{% url 'posts' %}" class="btn btn-lg ">Go Back</a>
                 </div>
               </div>
             </div>
