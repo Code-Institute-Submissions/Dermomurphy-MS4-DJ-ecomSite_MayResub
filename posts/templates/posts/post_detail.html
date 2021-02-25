@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+    <div class ="container text-white">
+         <h1 class="text-center uppercase my-3">Post Detail</h1>
+         <hr class="my-5">
+
+         <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="/media/{{ post.image }}" alt="{{ post.title }}">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{post.title}}</h5>
+                  <p class="card-text">{{ post.body }}</p>
+                  <p class="card-text"><small class="text-muted">Last Updated: {{ post.created_on }}</small></p>
+                  <a href="" class="btn btn-lg ">Go Back</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+{% endblock %}

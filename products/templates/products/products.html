@@ -15,25 +15,30 @@
 {% block content %}
 <div class="overlay"></div>
     <div class ="container text-white">
-         <h1 class="text-center uppercase my-3">News</h1>
-         <p class="text-center my-2">Our latest news articles</p>
+         <h1 class="text-center uppercase my-3">Beers</h1>
+         <p class="text-center my-2">Our latest & Greatest Beer Selection</p>
          <hr class="my-5">
 
          <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 690px;">
-            {% for post in posts %}
+            {% for product in products %}
             <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
               <div class="card p-3">
-                <a href="{% url 'post_detail' post.id %}">
-                  <img src="/media/{{ post.image }}" alt="{{ post.title }}" class="card-img-top">
+                <a href="{% url 'product_detail' product.id %}">
+                 <img src="/media/{{ product.image }}" alt="{{ product.name }}" class="card-img-top">
                 </a>
                 <div class="card-body">
-                  <h5 class="card-title">{{ post.title }}</h5>
-                  <p class="card-text">{{ post.body|truncatewords:15 }}</p>
-                  <p class="card-text"><small class="text-muted">Last updated {{ post.created_on|date:"Y-m-d"  }}</small></p>
+                  <h5 class="card-title">{{ product.name }}</h5>
+                  <p class="card-text">{{ product.description|truncatewords:15 }}</p>
+                  <div class="row">
+                      <div class="col-4"><p class="card-text"><small class="text-muted">Price: € {{ product.price }}</small></p></div>
+                      <div class="col-4"><p class="card-text"><small class="text-muted">ABV: {{ product.abv }}%</small></p></div>
+                      <div class="col-4"><p class="card-text"><small class="text-muted">IBU: {{ product.ibu }}</small></p></div>
+                    </div>
                 </div>
               </div>
             </div>
             {% endfor%}
+
             <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 0px;">
               <div class="card p-3">
                 <figure class="p-3 mb-0">

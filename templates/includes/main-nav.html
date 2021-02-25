@@ -5,9 +5,10 @@
           All Products
         </a>
         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="allProductsLink">
-          <li><a class="dropdown-item" href="#">By Rating</a></li>
-          <li><a class="dropdown-item" href="#">By Price</a></li>
-          <li><a class="dropdown-item" href="#">By Brewery</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=asc">By Rating</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?sort=brewery&direction=asc">By Brewery</a></li>
+          <li><a class="dropdown-item" href="{% url 'products'%}" class="dropdown-item">All Products</a></li>
         </ul>
       </li>
       <li class="nav-item dropdown">
@@ -15,10 +16,11 @@
           Beer Styles
         </a>
         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="stylesLink">
-          <li><a class="dropdown-item" href="#">IPA</a></li>
-          <li><a class="dropdown-item" href="#">STOUTS</a></li>
-          <li><a class="dropdown-item" href="#">LAGERS</a></li>
-          <li><a class="dropdown-item" href="#">ALES</a></li>
+          <li><a class="dropdown-item" href="{% url 'products'%}?styles=IPA">IPA</a></li>
+          <li><a class="dropdown-item" href="{% url 'products'%}?styles=STOUT">STOUTS</a></li>
+          <li><a class="dropdown-item" href="{% url 'products'%}?styles=LAGER">LAGERS</a></li>
+          <li><a class="dropdown-item" href="{% url 'products'%}?styles=ALE">ALES</a></li>
+          <li><a class="dropdown-item" href="{% url 'products'%}">ALL STYLES</a></li>
         </ul>
       </li>
       <li class="nav-item dropdown">
@@ -26,9 +28,9 @@
           Breweries
         </a>
         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="breweryLink">
-          <li><a class="dropdown-item" href="#">IRELAND</a></li>
-          <li><a class="dropdown-item" href="#">UK</a></li>
-          <li><a class="dropdown-item" href="#">USA</a></li>
+          <li><a class="dropdown-item" href="{% url 'products'%}?brewery=IRL">IRELAND</a></li>
+          <li><a class="dropdown-item" href="{% url 'products'%}?brewery=UK">UK</a></li>
+          <li><a class="dropdown-item" href="{% url 'products'%}?brewery=USA">USA</a></li>
         </ul>
       </li>
       <li class="nav-item dropdown">
