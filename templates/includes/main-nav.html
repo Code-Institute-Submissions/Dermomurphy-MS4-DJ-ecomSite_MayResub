@@ -7,27 +7,28 @@
         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="allProductsLink">
           <li><a class="dropdown-item" href="#">By Rating</a></li>
           <li><a class="dropdown-item" href="#">By Price</a></li>
-          <li><a class="dropdown-item" href="#">By Category</a></li>
+          <li><a class="dropdown-item" href="#">By Brewery</a></li>
         </ul>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle logo-font font-weight-bold text-white mr-5"" href="#" id="laptopLink" role="button" data-toggle="dropdown" aria-expanded="false">
-          Laptops
+        <a class="nav-link dropdown-toggle logo-font font-weight-bold text-white mr-5" href="#" id="stylesLink" role="button" data-toggle="dropdown" aria-expanded="false">
+          Beer Styles
         </a>
-        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="laptopLink">
-          <li><a class="dropdown-item" href="#">iZac</a></li>
-          <li><a class="dropdown-item" href="#">iZac Pro</a></li>
-          <li><a class="dropdown-item" href="#">iZac Air</a></li>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="stylesLink">
+          <li><a class="dropdown-item" href="#">IPA</a></li>
+          <li><a class="dropdown-item" href="#">STOUTS</a></li>
+          <li><a class="dropdown-item" href="#">LAGERS</a></li>
+          <li><a class="dropdown-item" href="#">ALES</a></li>
         </ul>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle logo-font font-weight-bold text-white mr-5"" href="#" id="tabletLink" role="button" data-toggle="dropdown" aria-expanded="false">
-          Tablets
+        <a class="nav-link dropdown-toggle logo-font font-weight-bold text-white mr-5"" href="#" id="breweryLink" role="button" data-toggle="dropdown" aria-expanded="false">
+          Breweries
         </a>
-        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="tabletLink">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="breweryLink">
+          <li><a class="dropdown-item" href="#">IRELAND</a></li>
+          <li><a class="dropdown-item" href="#">UK</a></li>
+          <li><a class="dropdown-item" href="#">USA</a></li>
         </ul>
       </li>
       <li class="nav-item dropdown">
@@ -41,7 +42,7 @@
         </ul>
       </li>
       <li class="nav-item ">
-        <a class="nav-link  logo-font font-weight-bold text-white mr-5" href="#" id="newsLink" role="button"  aria-expanded="false">
+        <a class="nav-link  logo-font font-weight-bold text-white mr-5" href="{% url 'posts' %}" id="newsLink" role="button"  aria-expanded="false">
           News
         </a>
       </li>
