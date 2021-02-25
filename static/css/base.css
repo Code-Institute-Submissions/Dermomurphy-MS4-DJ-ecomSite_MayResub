@@ -20,6 +20,12 @@ body {
     width: 1.5rem;
 }
 
+.main-nav {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .main-logo-link {
     width: fit-content;
@@ -76,7 +82,7 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: white;
+    background: #111;
     z-index: -1;
 }
 
