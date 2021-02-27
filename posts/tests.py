@@ -5,4 +5,4 @@ from datetime import datetime
 
 class PostTestCase(TestCase):
     def setUp(self):
-        Posts.objects.create(title='Test1', body='TEst text',created_on=datetime.now)
+        Posts.objects.create(title='Test1', body='Test text',created_on=datetime.now)

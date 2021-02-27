@@ -115,7 +115,22 @@
     </header>
 
     {% if messages %}
-        <div class="message-container"></div>
+        <div class="message-container">
+            {% for message in messages %}
+             {% with message.level as level %}
+                {% if level == 40 %}
+                    {% include 'includes/toasts/toast_error.html' %}
+                {% elif level == 30 %}
+                    {% include 'includes/toasts/toast_warning.html' %}
+                {% elif level == 25 %}
+                    {% include 'includes/toasts/toast_success.html' %}
+                {% else %}
+                    {% include 'includes/toasts/toast_info.html' %}
+                {% endif %}
+             {% endwith %}
+           {% endfor %}
+
+        </div>
     {% endif %}
 
     {% block page_header %}
@@ -125,12 +140,36 @@
     {% endblock %}
 
     {% block postloadjs %}
-    {% endblock %}
-
-    {% block footer %}
-    {% endblock %}
-
+    <script> 
+        $('.toast').toast('show');
+    </script>
     
+    {% endblock %}
+
+    <footer>
+        <div class="container-fluid bg-black">
+            <nav class="row">
+               <div class="col-6 text-center ">
+                   <ul class="nav">
+                   <li class="nav-item"><a href="{% url 'products' %}">All Beers</a></li>
+                  </ul>
+               </div>
+               <nav class="col-6">
+                  <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                      <a class="nav-link " href="https://www.facebook.com/"><i class="fab fa-facebook color-emphasis-1"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://www.twitter.com/"><i class="fab fa-twitter text-white"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://www.instagram.com/"><i class="fab fa-instagram color-emphasis-3"></i></a>
+                    </li>
+                  </ul>
+               </nav>
+            </nav>
+         </div>
+    </footer>
   </body>
 </html>
 
