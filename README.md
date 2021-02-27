@@ -9,8 +9,8 @@ Their is also a recent news section or posts from the website host. A user can u
 The Admin can create, read, update and delete posts and Beers and Breweries in the django administration section. 
 The pages are designed to be responsive with a masonary feel on the items and news post sections. A customer can easily see their added quantities in the shopping bag and checkout their items for delivery.
 
-Live Deployed Project on Heroku: [HERE]()
-GitHub Repo : [HERE]()
+- Live Deployed Project on Heroku: [HERE]()
+- GitHub Repo : [HERE]()
 
 # Contents
 
