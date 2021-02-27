@@ -1,1 +1,1 @@
-web: gunicorn ecom-nearrocks.wsgi.application
+web: gunicorn ecomSite.wsgi.application
