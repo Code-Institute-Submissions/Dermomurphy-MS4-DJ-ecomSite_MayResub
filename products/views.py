@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Brewery
+from django.contrib.sessions.models import Session
+
 
 # Create your views here.
 
@@ -14,7 +16,6 @@ def all_products(request):
     sort = None
     direction = None
 
-    request.session.set_test_cookie()
 
     if request.GET:
         if 'sort' in request.GET:
@@ -69,9 +70,7 @@ def product_detail(request, product_id):
     """ A View to show a specific product details"""
     product = get_object_or_404(Product, pk=product_id)
 
-    if request.session.test_cookie_worked():
-        print("The test cookie worked!!!")
-        # request.session.delete_test_cookie()
+
 
     context = {
         'product': product,
