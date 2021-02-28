@@ -116,15 +116,45 @@ As an Admin I have the ability to :
 # Deployment
 ## Issues:
 - As I have developed this project not on Gitpod but on a local Virtual Environment using VSCode as suggested from my last project submission I have ran into some obstacles that have caused some major issues. The main issue is that the local session variables are not being stored correctly in the session storage. This means the Cart update has not come to fruition unfortunately and it has hampered my progresss significantly. I have as of yet not found a solution even after conversing with my mentor and it is worth noting that some other students may have this issue if they are to follow the tutorials using a venv. Another main issue overcome was the gunicorn heroku deployment procfile. One must specifically define the path in the procfile in order to have a successful build otherwise Heorku cannot find the correct wsgi application module.
-`web: PYTHONPATH=`pwd`/.. gunicorn ecomSite.wsgi:application
+```web: PYTHONPATH=`pwd`/.. gunicorn ecomSite.wsgi:application```
 `
 
 - Even though the project is lacking in functionality I have managed to deploy to Heroku and setup all the AWS storage necessary. I bare full responsiblity for the unfinished nature of the project however I have been hampered in progressing due to these issues. 
 
 ## Heroku:
+Deployed using Heroku accessed via the link below
+ - https://ecom-nearrocks.herokuapp.com/
+
+
+  ### Process
+   #### 1: Created a Github account at https://github.com My account: https://github.com/Dermomurphy
+
+   #### 2: Setup Heroku for hosting App.
+   1. Create a Heroku account
+   2. Create a new app [must have a unique name] and select your region
+
+   #### 3: Synced folder on local machine to Github Repo via VsCode: https://github.com/Dermomurphy/MS4-DJ-ecomSite automatic deployment on Heroku.
+   -  Synced folder on local machine to Github Repo via VsCode: https://github.com/Dermomurphy/MS4-DJ-ecomSite
+
+   - Configure Procfile to have content ```web: PYTHONPATH=`pwd`/.. gunicorn ecomSite.wsgi:application``` in order to deploy app using python on Heroku. 
+
+   #### 4: Set environment variables in env.py locally and on Heroku config variables.
+   - Create an env.py file in the apps root directory.
+   - Add the env.py file to your .gitignore file
+   - In order to deploy in Heroku set Config vars located in settings. Click Reveal config vars to input these variables.
+
+
+   #### 7: Pushing files to Heroku hosted. 
+   1. In the terminal window type in `heroku login` and fill in your heroku credentials and password
+   2. Commit all your files and type in the same terminal window `git push heroku master`. 
+
+   #### 8: Open Deployed App in Heroku.
+   1. Click on **Open app** in the Heroku account, the application will open in a new tab within the browser
+  
+---     
 
 ## AWS (Amazon Web Services):
-- An AWS Account was created with and S3 Bucket instance to store our static files for hosting. IAM user group and content polocies were also generated giving us access to the secret access key ID and secret access key for retrieval of file. 
+- An AWS Account was created with and S3 Bucket instance to store our static files for hosting. IAM user group and content policies were also generated giving us access to the secret access key ID and secret access key for retrieval of file. 
 
 |Key|Value|
 |--|--|
