@@ -8,6 +8,7 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
+    margin-bottom: 60px;
 }
 
 
@@ -87,7 +88,7 @@ body {
 }
 
 
-.footer {
+.sticky-footer {
     position: absolute;
     bottom: 0;
     width: 100%;
