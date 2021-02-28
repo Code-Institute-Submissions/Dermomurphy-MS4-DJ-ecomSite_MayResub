@@ -228,4 +228,4 @@ I do not own any of the photographs however I have been given express permission
 ## Acknowledgements
 - Mentor Adegbenga Adeye:  for site layout inspiration, constructive advice. Github : https://github.com/deye9
 
-- Code Institute : for instructional videos and Tutoring/support slack channel. https://codeinstitute.net/
+- Code Institute :  Full stack boutique ado framework and for instructional videos and Tutoring/support slack channel. https://codeinstitute.net/
