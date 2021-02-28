@@ -1,7 +1,7 @@
 # MS4-DJ-ecomSite
 MS4 Project E-Commerce Site
 
-[View the deployed project here.](HEROKUAPP)
+[View the deployed project here.](https://ecom-nearrocks.herokuapp.com/)
 
 MS4 Final Project for Code Institute.
 NearRocks Craft Beer Store is an online store to purchase Craft Beers mainly from Ireland but also Craft beers from USA and UK. The user can select the type and style of the beer they desire to purchase. They can login the the website account to see their purchased items.
@@ -9,8 +9,8 @@ Their is also a recent news section or posts from the website host. A user can u
 The Admin can create, read, update and delete posts and Beers and Breweries in the django administration section. 
 The pages are designed to be responsive with a masonary feel on the items and news post sections. A customer can easily see their added quantities in the shopping bag and checkout their items for delivery.
 
-- Live Deployed Project on Heroku: [HERE]()
-- GitHub Repo : [HERE]()
+- Live Deployed Project on Heroku: [HERE](https://ecom-nearrocks.herokuapp.com/)
+- GitHub Repo : [HERE](https://github.com/Dermomurphy/MS4-DJ-ecomSite)
 
 # Contents
 
@@ -76,9 +76,31 @@ Mobile
 
 # Deployment
 
-## Heroku
+## Heroku:
 
 ## AWS (Amazon Web Services):
+- An AWS Account was created with and S3 Bucket instance to store our static files for hosting. IAM user group and content polocies were also generated giving us access to the secret access key ID and secret access key for retrieval of file. 
+
+|Key|Value|
+|--|--|
+|AWS_ACCESS_KEY_ID|```AWS Access Key ID```|
+|AWS_SECRET_ACCESS_KEY|```AWS Secret Access Key```|
+|DATABASE_URL	|```Postgres Database URL```|
+|AWS_STORAGE_BUCKET_NAME| ```ecom-nearrocks```|
+|AWS_S3_REGION_NAME|```eu-west-1```|
+|AWS_ACCESS_KEY_ID |```os.environ.get('AWS_ACCESS_KEY_ID')```|
+|AWS_SECRET_ACCESS_KEY|``` os.environ.get('AWS_SECRET_ACCESS_KEY')```|
+|AWS_S3_CUSTOM_DOMAIN |```f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'```|
+    
+    #Static and MEdia Files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
 
 ## Local Deployment:
 
