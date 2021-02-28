@@ -34,9 +34,10 @@
                   <h5 class="card-title">{{ product.name }}</h5>
                   <p class="card-text">{{ product.description|truncatewords:15 }}</p>
                   <div class="row">
-                      <div class="col-4"><p class="card-text"><small class="text-muted">Price: € {{ product.price }}</small></p></div>
-                      <div class="col-4"><p class="card-text"><small class="text-muted">ABV: {{ product.abv }}%</small></p></div>
-                      <div class="col-4"><p class="card-text"><small class="text-muted">IBU: {{ product.ibu }}</small></p></div>
+                      <div class="col-3"><p class="card-text"><small class="text-muted">Price: € {{ product.price }}</small></p></div>
+                      <div class="col-3"><p class="card-text"><small class="text-muted">ABV: {{ product.abv }}%</small></p></div>
+                      <div class="col-3"><p class="card-text"><small class="text-muted">IBU: {{ product.ibu }}</small></p></div>
+                      <div class="col-3"><p class="card-text"><small class="text-muted">Style: {{ product.style }}</small></p></div>
                     </div>
                 </div>
               </div>
