@@ -34,10 +34,9 @@ The pages are designed to be responsive with a masonary feel on the items and ne
     - [**Posts Model*](#posts-model)
 
  
-3. [**Technologies Used**](#technologies-used)
+4. [**Technologies Used**](#technologies-used)
 
 5. [**Testing**](#testing)
-
  
 6. [**Deployment**](#deployment)
  
