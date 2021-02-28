@@ -64,7 +64,18 @@ Mobile
  ### Products Model
  |id|brewery|sku|name|style|description|abv|ibu|price|rating|image_url|image|
  |--|--|--|--|--|--|--|--|--|--|--|--|
- |id (pk)|CharField|CharField|CharField|CharField|TextField|DecimalField|IntegerField|DecimalField|DecimalField|URLField|ImageField|
+ |id (pk)|CharField (fk=>brewery)|CharField|CharField|CharField|TextField|DecimalField|IntegerField|DecimalField|DecimalField|URLField|ImageField|
+
+ ### Brewery Model
+ |id|name|friendly_name|country|
+ |--|--|--|--|
+ |id (pk)|CharField|CharField|CharField|
+
+ ### Posts Model
+ |id|title|body|image|created_on|
+ |--|--|--|--|
+ |id (pk)|CharField|TextField|ImageField|DateTimeField|
+
  
 # Technologies Used:
 1. [Bootstrap](https://getbootstrap.com)
