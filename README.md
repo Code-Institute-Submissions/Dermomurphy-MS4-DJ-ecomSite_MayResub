@@ -17,9 +17,21 @@ The pages are designed to be responsive with a masonary feel on the items and ne
 # UX
 ### Objectives
 
-### User Stories
+### User Stories:
+As as User I have the ability to :
+1. See Beer products of different beer styles and breweries and purchase these items.
+2. I can see the latest news Posts in the news section and click into further detail about that post.
+3. I can sort the Beers based on Rating , price, Beer Style and see all products.
 
-- User Stories can be seen [HERE](googledrivelink)
+
+
+### Admin Stories:
+As an Admin I have the ability to : 
+1. I Can login to the site with my super username and secure password or I can login using my GitHub social account.
+2. Once logged in as an admin I can add news posts, Breweries and beers. 
+3. As a logged in user I have the ability to add any new Beers.  I can select a title, Image URL and write a description using the content editor provided. I can also give this beer a star rating out of 5 stars, 5 being the highest mark. IBU, ABV brewery name can also be added. 
+
+
 
 
 ### Features
@@ -41,10 +53,7 @@ The pages are designed to be responsive with a masonary feel on the items and ne
 #### Shopping Checkout Page
 #### Profile Page
 
-### Wireframes
-Desktop
 
-Mobile
 
 ## Surface
 - #### Colour Scheme
@@ -102,6 +111,7 @@ Mobile
 15. [Python V3.6.9](https://www.python.org/) - Python Programming language.
 
 # Testing
+- simple Django SetUp testing was pefformed on the products and Brewery models. Running tests can be performed by type `./manage.py test` into the CLI
 
 # Deployment
 ## Issues:
