@@ -25,12 +25,19 @@ The pages are designed to be responsive with a masonary feel on the items and ne
 ### Features
 
 #### Common Base HTML
+- Framework for the project working off base.html
 #### Home PAGE
+- a simple banner image with shop now button taking the user to all products with main nav and sub navigation. Main nav ahas logo and account login info with shopping bag icon
 #### Products Page
+- A masonary style layout of all products in the shop
 #### Product Detail Page
+- a Detail section of product description , rating, price and quantity needed a go back button and an add to bag button
 #### Shopping Bag
+- shopping contents section with tabular list of all items added to the bag
 #### Posts Page
+- Latest news from the website admin laid out in masonary style, truncated text display on each post
 #### Post Detail Page
+- Furthe detail on each post full banner image and description
 #### Shopping Checkout Page
 #### Profile Page
 
@@ -41,12 +48,24 @@ Mobile
 
 ## Surface
 - #### Colour Scheme
+    - Slate Grey Bootstrap css used as main css (Bootswatch)[https://bootswatch.com/slate/]
 - #### Typography
+    Google fonts Lato as main font
 - #### Images Used
+    - (unsplash)[www.unsplash.com] and various brewery websites see disclaimer/notice of image use.
 - #### Icons
+    - Font Awesome Icons used.(Fontawesme)[www.fontawesome.com]
 
 # Database
+ - for local deployment an sqlite3 database was used. 
+ - for heroku deployment the heroku postgresSQL databse is used.
 
+ - custom models used for posts, brewery, products.
+ ### Products Model
+ |id|brewery|sku|name|style|description|abv|ibu|price|rating|image_url|image|
+ |--|--|--|--|--|--|--|--|--|--|--|--|
+ |id (pk)|CharField|CharField|CharField|CharField|TextField|DecimalField|IntegerField|DecimalField|DecimalField|URLField|ImageField|
+ 
 # Technologies Used:
 1. [Bootstrap](https://getbootstrap.com)
     - Built with Bulma CSS framework. 
@@ -68,8 +87,7 @@ Mobile
     - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - used for Hyper text markup language.
 12. ![CSS3](https://img.shields.io/static/v1?label=CSS&message=3&color=1572B6&logo=css3&logoColor=ffffff)
     - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - Used for cascading stylesheets.
-13. [Visual Paradigm](https://online.visual-paradigm.com/) - Schema Diagrams
-14. [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) - Jinja - Templating language.
+13. [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) - Jinja - Templating language.
 15. [Python V3.6.9](https://www.python.org/) - Python Programming language.
 
 # Testing
@@ -83,14 +101,12 @@ Mobile
 
 |Key|Value|
 |--|--|
-|AWS_ACCESS_KEY_ID|```AWS Access Key ID```|
-|AWS_SECRET_ACCESS_KEY|```AWS Secret Access Key```|
-|DATABASE_URL	|```Postgres Database URL```|
-|AWS_STORAGE_BUCKET_NAME| ```ecom-nearrocks```|
-|AWS_S3_REGION_NAME|```eu-west-1```|
-|AWS_ACCESS_KEY_ID |```os.environ.get('AWS_ACCESS_KEY_ID')```|
-|AWS_SECRET_ACCESS_KEY|``` os.environ.get('AWS_SECRET_ACCESS_KEY')```|
-|AWS_S3_CUSTOM_DOMAIN |```f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'```|
+|AWS_ACCESS_KEY_ID|`Custom AWS Access Key ID`|
+|AWS_SECRET_ACCESS_KEY|`Custom AWS Secret Access Key`|
+|DATABASE_URL	|`Postgres Database URL`|
+|AWS_STORAGE_BUCKET_NAME| `ecom-nearrocks`|
+|AWS_S3_REGION_NAME|`eu-west-1`|
+|AWS_S3_CUSTOM_DOMAIN |`f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'`|
     
     #Static and MEdia Files
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
@@ -103,11 +119,19 @@ Mobile
 
 
 ## Local Deployment:
+1. `mkdir ecomSite`
+2. `cd ecomSite`
+3. Create a virtualenv: `python -m virtualenv venv_name`
+4. `cd venv_name`
+5. Activate it: `source venv_name\bin/activate`
+6. from within the venv environment use `git clone <repo-name>` and and clone this repo into it (`https://github.com/Dermomurphy/MS4-DJ-ecomSite.git`)
+7. `pip install -r requirements.txt` 
+8. To run the server on localhost:8000 use `python3 manage.py runserver` open a browser and point it to localhost:8000
 
 # Credits:
 - Main Text Written by Dermot Murphy
 - Google Fonts for font styles; https://fonts.google.com/
-- [Bootstrap Slate CSS Framework + Themes]() Bespoke Slate Theme used
+- [Bootstrap Slate CSS Framework + Themes](https://bootswatch.com/slate/) Bespoke Slate Theme used
 - W3schools.com:[W3Schools](https://www.w3schools.com/)
 
 # Notice of Image Use:
