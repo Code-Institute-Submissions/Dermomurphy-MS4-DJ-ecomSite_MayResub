@@ -24,7 +24,7 @@
             <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
               <div class="card p-3">
                 <a href="{% url 'post_detail' post.id %}">
-                  <img src="/media/{{ post.image }}" alt="{{ post.title }}" class="card-img-top">
+                  <img src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.title }}" class="card-img-top">
                 </a>
                 <div class="card-body">
                   <h5 class="card-title">{{ post.title }}</h5>

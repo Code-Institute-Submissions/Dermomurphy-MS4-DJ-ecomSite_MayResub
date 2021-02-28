@@ -73,13 +73,13 @@ Mobile
 
  ### Posts Model
  |id|title|body|image|created_on|
- |--|--|--|--|
+ |--|--|--|--|--|
  |id (pk)|CharField|TextField|ImageField|DateTimeField|
 
  
 # Technologies Used:
 1. [Bootstrap](https://getbootstrap.com)
-    - Built with Bulma CSS framework. 
+    - Built with Bootstrap CSS framework. 
 2. ![jQuery](https://img.shields.io/badge/jQuery-3.5.1-yellowgreen)
     - [jQuery](https://jquery.com/) - is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation. The project uses **JQuery** to simplify DOM manipulation.
 3.  [PostrgesSQL]() - Heroku app based PostgresSQL Database
@@ -104,6 +104,12 @@ Mobile
 # Testing
 
 # Deployment
+## Issues:
+- As I have developed this project not on Gitpod but on a local Virtual Environment using VSCode as suggested from my last project submission I have ran into some obstacles that have caused some major issues. The main issue is that the local session variables are not being stored correctly in the session storage. This means the Cart update has not come to fruition unfortunately and it has hampered my progresss significantly. I have as of yet not found a solution even after conversing with my mentor and it is worth noting that some other students may have this issue if they are to follow the tutorials using a venv. Another main issue overcome was the gunicorn heroku deployment procfile. One must specifically define the path in the procfile in order to have a successful build otherwise Heorku cannot find the correct wsgi application module.
+`web: PYTHONPATH=`pwd`/.. gunicorn ecomSite.wsgi:application
+`
+
+- Even though the project is lacking in functionality I have managed to deploy to Heroku and setup all the AWS storage necessary. I bare full responsiblity for the unfinished nature of the project however I have been hampered in progressing due to these issues. 
 
 ## Heroku:
 
