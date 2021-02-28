@@ -13,6 +13,38 @@ The pages are designed to be responsive with a masonary feel on the items and ne
 - GitHub Repo : [HERE](https://github.com/Dermomurphy/MS4-DJ-ecomSite)
 
 # Contents
+1. [**UX**](#ux)
+ 
+   - [**User Stories**](#user-stories)
+   - [**Admin Stories**](#admin-stories)
+ 
+2. [**Features**](#features)
+   - [**Common Base Html**](#common-base-html)
+   - [**Home Page**](#home-page)
+   - [**Products Page**](#products-page)
+   - [**Product Detail Page**](#product-detail-page)
+   - [**Shopping Bag**](#shopping-bag)
+   - [**Posts Page**](#posts-page)
+   - [**Post Detail Page**](#post-detail-page)
+   - [**Surface**](#surface)
+
+3. [**Database*](#database)
+    - [**Products Model*](#products-model)
+    - [**Brewery Model*](#brewery-model)
+    - [**Posts Model*](#posts-model)
+
+ 
+3. [**Technologies Used**](#technologies-used)
+
+5. [**Testing**](#testing)
+
+ 
+6. [**Deployment**](#deployment)
+ 
+7. [**Credits**](#credits)
+   - [**Content**](#content)
+   - [**Media**](#media)
+   - [**Acknowledgements**](#acknowledgements)
 
 # UX
 ### Objectives
@@ -32,9 +64,7 @@ As an Admin I have the ability to :
 3. As a logged in user I have the ability to add any new Beers.  I can select a title, Image URL and write a description using the content editor provided. I can also give this beer a star rating out of 5 stars, 5 being the highest mark. IBU, ABV brewery name can also be added. 
 
 
-
-
-### Features
+# Features
 
 #### Common Base HTML
 - Framework for the project working off base.html
@@ -50,8 +80,7 @@ As an Admin I have the ability to :
 - Latest news from the website admin laid out in masonary style, truncated text display on each post
 #### Post Detail Page
 - Furthe detail on each post full banner image and description
-#### Shopping Checkout Page
-#### Profile Page
+
 
 
 
@@ -186,15 +215,16 @@ Deployed using Heroku accessed via the link below
 8. To run the server on localhost:8000 use `python3 manage.py runserver` open a browser and point it to localhost:8000
 
 # Credits:
+## Content
 - Main Text Written by Dermot Murphy
 - Google Fonts for font styles; https://fonts.google.com/
 - [Bootstrap Slate CSS Framework + Themes](https://bootswatch.com/slate/) Bespoke Slate Theme used
 - W3schools.com:[W3Schools](https://www.w3schools.com/)
 
-# Notice of Image Use:
+## Media
 I do not own any of the photographs however I have been given express permission to use any photographs from the breweries shown directly. I operate Craft beer tasting sessions under [DublinBeerTasting](www.dublinbeertasting.com) and as such have a good working relationship with all showcased breweries.
 
-# Acknowledgements:
+## Acknowledgements
 - Mentor Adegbenga Adeye:  for site layout inspiration, constructive advice. Github : https://github.com/deye9
 
 - Code Institute : for instructional videos and Tutoring/support slack channel. https://codeinstitute.net/
