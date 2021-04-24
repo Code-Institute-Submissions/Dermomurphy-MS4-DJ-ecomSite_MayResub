@@ -105,7 +105,7 @@ AUTHENTICATION_BACKENDS = [
     
 ]
 
-SITE_ID = 3
+SITE_ID = os.environ.get('SITE_ID_NO')
 
 SOCIALACCOUNT_PROVIDERS = {
     'facebook': {
