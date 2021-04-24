@@ -105,7 +105,7 @@ AUTHENTICATION_BACKENDS = [
     
 ]
 
-SITE_ID = 1
+SITE_ID = 3
 
 SOCIALACCOUNT_PROVIDERS = {
     'facebook': {
