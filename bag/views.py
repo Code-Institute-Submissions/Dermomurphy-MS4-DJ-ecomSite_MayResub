@@ -15,18 +15,32 @@ def add_to_bag(request,item_id):
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
+    volume = None
+    if 'product_volume' in request.POST:
+            volume = request.POST['product_volume']
     
+    #if Bag in session use it , otherwise create one
     bag = request.session.get('bag', {})
 
+    if volume:
+            if item_id in list(bag.keys()):
+                    if volume in bag[item_id]['items_by_volume'].keys():
+                            bag[item_id]['items_by_volume'][volume]+= quantity
+                    else:
+                            bag[item_id]['items_by_volume'][volume] = quantity
+            else:
+                    bag[item_id] = {'items_by_volume': {volume: quantity}}
+    else:           
 
-    if item_id in list(bag.keys()):
-            bag[item_id] += quantity
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
-    else:
-            bag[item_id] = quantity
-            messages.success(request, f'Added{product.name} to your bag')
+
+        if item_id in list(bag.keys()):
+                bag[item_id] += quantity
+                messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+        else:
+                bag[item_id] = quantity
+                messages.success(request, f'Added{product.name} to your bag')
         
-        
+      # overwite variable with updated session  
     request.session['bag'] = bag
     
     return redirect(redirect_url)
