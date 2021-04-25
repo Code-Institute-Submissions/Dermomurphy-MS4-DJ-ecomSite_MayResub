@@ -24,6 +24,7 @@ def bag_contents(request):
                 'item_id': item_id,
                 'quantity': item_data,
                 'product': product,
+                'total': total,
             })
         else:
             for volume, quantity in item_data['items_by_volume'].items():
@@ -35,6 +36,7 @@ def bag_contents(request):
                             'quantity': item_data,
                             'product': product,
                             'volume': volume,
+                            'total': total,
                         })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
