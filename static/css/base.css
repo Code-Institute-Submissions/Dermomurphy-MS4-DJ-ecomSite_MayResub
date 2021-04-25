@@ -57,6 +57,21 @@ body {
     border: 1px solid black;
 
 } 
+/* Back to top buttoon */
+.btt-button {
+    height: 42px;
+    width:42px;
+    position: fixed;
+    bottom : 10px;
+    right: 10px;
+}
+/* Back to top link and update/remove cursor */
+.btt-link,
+.update-link,
+.remove-link {
+    cursor: pointer;
+
+}
 
 .shop-now-button:hover,
 .shop-now-button:active,
