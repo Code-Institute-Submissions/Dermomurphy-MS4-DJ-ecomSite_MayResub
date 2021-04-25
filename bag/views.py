@@ -44,3 +44,33 @@ def add_to_bag(request,item_id):
     request.session['bag'] = bag
     
     return redirect(redirect_url)
+
+
+def adjust_bag(request,item_id):
+    """ Add a quantity of the specified product to the specific amount """
+
+    quantity = int(request.POST.get('quantity'))
+    volume = None
+    if 'product_volume' in request.POST:
+            volume = request.POST['product_volume']
+    
+    #if Bag in session use it , otherwise create one
+    bag = request.session.get('bag', {})
+
+    if volume:
+          if quantity > 0:
+                  bag[item_id]['items_by_volume'][volume] = quantity
+          else:
+                  del bag[item_id]['items_by_volume'][volume]
+    else:           
+
+
+        if quantity > 0:
+                bag[item_id] = quantity
+        else:
+                bag.pop[item_id]
+        
+      # overwite variable with updated session  
+    request.session['bag'] = bag
+    # redirect back to view bag 
+    return redirect(reverse('view_bag'))

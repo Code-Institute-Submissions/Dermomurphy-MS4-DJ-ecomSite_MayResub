@@ -20,10 +20,10 @@
          <p class="text-center my-2">Our latest & Greatest Beer Selection</p>
          <hr class="my-5">
 
-         <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 690px;">
+         <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 600px;">
             {% for product in products %}
-            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
-              <div class="card p-3">
+            <div class="col-sm-6 col-md-4 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
+              <div class="card">
                 <a href="{% url 'product_detail' product.id %}">
                   {% if product.image %}
                     <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top">
@@ -38,7 +38,7 @@
                       <div class="col-3"><p class="card-text"><small class="text-muted">Price: € {{ product.price }}</small></p></div>
                       <div class="col-3"><p class="card-text"><small class="text-muted">ABV: {{ product.abv }}%</small></p></div>
                       <div class="col-3"><p class="card-text"><small class="text-muted">IBU: {{ product.ibu }}</small></p></div>
-                      <div class="col-3"><p class="card-text"><small class="text-muted">Style: {{ product.style }}</small></p></div>
+                      <div class="col-3"><p class="card-text"><small class="text-muted">Style: {{ product.style|lower }}</small></p></div>
                     </div>
                 </div>
               </div>
