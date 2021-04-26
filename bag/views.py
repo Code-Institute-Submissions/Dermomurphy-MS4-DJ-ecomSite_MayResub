@@ -61,16 +61,45 @@ def adjust_bag(request,item_id):
           if quantity > 0:
                   bag[item_id]['items_by_volume'][volume] = quantity
           else:
-                  del bag[item_id]['items_by_volume'][volume]
+                del bag[item_id]['items_by_volume'][volume]
+                if not bag[item_id]['items_by_volume']:
+                        bag.pop(item_id)
     else:           
 
 
         if quantity > 0:
                 bag[item_id] = quantity
         else:
-                bag.pop[item_id]
+                bag.po(item_id)
         
       # overwite variable with updated session  
     request.session['bag'] = bag
     # redirect back to view bag 
     return redirect(reverse('view_bag'))
+
+def remove_from_bag(request,item_id):
+    """ Remove Item from Shopping Bag"""
+
+    try:
+        volume = None
+        if 'product_volume' in request.POST:
+                volume = request.POST['product_volume']
+        
+        #if Bag in session use it , otherwise create one
+        bag = request.session.get('bag', {})
+
+        if volume:
+                del bag[item_id]['items_by_volume'][volume]
+                if not bag[item_id]['items_by_volume']:
+                        bag.pop(item_id)
+
+                
+        else:           
+
+                bag.pop(item_id)
+                
+        # overwite variable with updated session  
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+    except Exception as e:
+        return HttpResponse(status=500)

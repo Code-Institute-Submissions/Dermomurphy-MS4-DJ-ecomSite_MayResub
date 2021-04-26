@@ -71,7 +71,7 @@ body {
 /* Back to top link and update/remove cursor */
 .btt-link,
 .update-link,
-.remove-link {
+.remove-item {
     cursor: pointer;
 
 }
