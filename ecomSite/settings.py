@@ -55,6 +55,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.github',
     'storages',
+
+    #other
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -69,6 +72,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'ecomSite.urls'
+
+CRISPY_TEMPLATE = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -87,6 +92,10 @@ TEMPLATES = [
                 'bag.contexts.bag_contents',
             
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'cripsy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
