@@ -1,7 +1,5 @@
 html {
-   
-    display: flex;
-    flex-direction: column;
+    position:relative;
     min-height: 100vh;
     margin: 0;
     padding:0;
@@ -10,11 +8,12 @@ html {
 body {
     background: url('/media/WW-Brewery.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    min-height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
     padding-bottom: 60px;
     margin-bottom: 60px;
+    clear:both;
 }
 
 
@@ -177,6 +176,9 @@ body {
 .toast-capper {
     height: 2px;
 }
+
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
