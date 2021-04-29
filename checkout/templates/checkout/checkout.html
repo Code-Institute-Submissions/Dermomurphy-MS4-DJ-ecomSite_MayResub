@@ -116,11 +116,16 @@
 							<span class="font-weight-bold">Adjust Bag</span>
 						</a>
 						<button id="submit-button" class="btn btn-white rounded-0">
-							<span class="font-weight-bold">Complete Order</span>
+                            <div class="spinner text-white hidden" id="spinner"></div>
+							<span class="font-weight-bold button-text">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
 							</span>
 						</button>
+                        <p class="result-message hidden">
+                            Payment succeeded, see the result in your
+                            <a href="" target="_blank">Stripe dashboard.</a> Refresh the page to pay again.
+                        </p>
 						<p class="small is-emphasis-1 my-0">
 							<span class="icon">
 								<i class="fas fa-exclamation-circle"></i>
