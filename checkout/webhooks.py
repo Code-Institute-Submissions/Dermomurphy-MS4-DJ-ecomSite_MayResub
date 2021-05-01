@@ -31,5 +31,7 @@ def webhook(request):
         # Exception
         return HttpResponse(status=400)
     
+    print('Success')
+    return HttpResponse(status=200)
 
  
