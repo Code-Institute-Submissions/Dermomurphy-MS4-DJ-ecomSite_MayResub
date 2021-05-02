@@ -17,6 +17,8 @@ class StripeWH_Handler:
 
     def handle_payment_intent_succeeded(self, event):
         """ Handle payment_intent.succeded webhook from stripe"""
+        intent = event.data.object
+        print(intent)
 
         return HttpResponse(
             content=f'Webhook Received: {event["type"]}',
