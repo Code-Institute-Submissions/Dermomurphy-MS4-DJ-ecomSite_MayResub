@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
-    'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.github',
     'storages',
 
@@ -120,27 +119,7 @@ AUTHENTICATION_BACKENDS = [
 SITE_ID = os.environ.get('SITE_ID_NO')
 
 SOCIALACCOUNT_PROVIDERS = {
-    'facebook': {
-        'METHOD': 'oauth2',
-        'SDK_URL': '//connect.facebook.net/{locale}/sdk.js',
-        'SCOPE': ['email', 'public_profile'],
-        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
-        'INIT_PARAMS': {'cookie': True},
-        'FIELDS': [
-            'id',
-            'first_name',
-            'last_name',
-            'middle_name',
-            'name',
-            'name_format',
-            'picture',
-            'short_name'
-        ],
-        'EXCHANGE_TOKEN': True,
-        'LOCALE_FUNC': 'path.to.callable',
-        'VERIFIED_EMAIL': False,
-        'VERSION': 'v7.0',
-    },
+
     'github': {
         'SCOPE': [
             'user',
