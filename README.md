@@ -53,12 +53,16 @@ As as User I have the ability to :
 1. See Beer products of different beer styles and breweries and purchase these items.
 2. I can see the latest news Posts in the news section and click into further detail about that post.
 3. I can sort the Beers based on Rating , price, Beer Style and see all products.
-
+4. I can add beers to the cart and go to secure checkout.
+5. If applicable I can add beers of specific volumes to the cart [330ml or 500ml]
+6. I can fill out my billing details and credit card details and enable payment via stripe for the products chosen.
+7. If I have a user profile I can chose to save my billing details for future use.
+8. I can create a user profile manually or I can login via Github using my social account.
 
 
 ### Admin Stories:
 As an Admin I have the ability to : 
-1. I Can login to the site with my super username and secure password or I can login using my GitHub social account.
+1. I Can login to the site with my super username and secure password .
 2. Once logged in as an admin I can add news posts, Breweries and beers. 
 3. As a logged in user I have the ability to add any new Beers.  I can select a title, Image URL and write a description using the content editor provided. I can also give this beer a star rating out of 5 stars, 5 being the highest mark. IBU, ABV brewery name can also be added. 
 
@@ -143,13 +147,10 @@ As an Admin I have the ability to :
 
 # Deployment
 ## Issues:
-- As I have developed this project not on Gitpod but on a local Virtual Environment using VSCode as suggested from my last project submission I have ran into some obstacles that have caused some major issues. The main issue is that the local session variables are not being stored correctly in the session storage. This means the Cart update has not come to fruition unfortunately and it has hampered my progresss significantly. I have as of yet not found a solution even after conversing with my mentor and it is worth noting that some other students may have this issue if they are to follow the tutorials using a venv. [10 min before submission this started working on Heroku] There may have been a div tag not closed on the shopping bag page that didn't allow the logic to function properly but I cannot see why the bag contents would not have been output as a result anyway. It proves the code was correct as I thought but was not working due to some fundamental issue.
-
-Another main issue overcome was the gunicorn heroku deployment procfile. One must specifically define the path in the procfile in order to have a successful build otherwise Heorku cannot find the correct wsgi application module.
+An issue overcome was the gunicorn heroku deployment procfile. One must specifically define the path in the procfile in order to have a successful build otherwise Heorku cannot find the correct wsgi application module.
 ```web: PYTHONPATH=`pwd`/.. gunicorn ecomSite.wsgi:application```
 `
 
-- Even though the project is lacking in functionality I have managed to deploy to Heroku and setup all the AWS storage necessary. I bare full responsiblity for the unfinished nature of the project however I have been hampered in progressing due to these issues. 
 
 ## Heroku:
 Deployed using Heroku accessed via the link below
